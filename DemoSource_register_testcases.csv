@@ -1,0 +1,65 @@
+Title,Section,Type,Priority,Preconditions,Steps,Expected Result
+TC001 - Successful Registration with Valid Data,Account Registration,Functional,High,User is on https://sauce-demo.myshopify.com/account/register,"1. Navigate to https://sauce-demo.myshopify.com/account/register
+2. Enter First Name: Tuang
+3. Enter Last Name: Test
+4. Enter Email: tuang@test.com
+5. Enter Password: 12345
+6. Click 'Create' or 'Register' button",User is successfully registered and redirected to the account page. A confirmation message or welcome message is displayed.
+TC002 - Registration with Blank First Name,Account Registration,Functional,High,User is on https://sauce-demo.myshopify.com/account/register,"1. Navigate to https://sauce-demo.myshopify.com/account/register
+2. Leave First Name blank
+3. Enter Last Name: Test
+4. Enter Email: tuang@test.com
+5. Enter Password: 12345
+6. Click 'Create' or 'Register' button",An error message is displayed indicating First Name is required. Registration does not proceed.
+TC003 - Registration with Blank Last Name,Account Registration,Functional,High,User is on https://sauce-demo.myshopify.com/account/register,"1. Navigate to https://sauce-demo.myshopify.com/account/register
+2. Enter First Name: Tuang
+3. Leave Last Name blank
+4. Enter Email: tuang@test.com
+5. Enter Password: 12345
+6. Click 'Create' or 'Register' button",An error message is displayed indicating Last Name is required. Registration does not proceed.
+TC004 - Registration with Blank Email,Account Registration,Functional,High,User is on https://sauce-demo.myshopify.com/account/register,"1. Navigate to https://sauce-demo.myshopify.com/account/register
+2. Enter First Name: Tuang
+3. Enter Last Name: Test
+4. Leave Email blank
+5. Enter Password: 12345
+6. Click 'Create' or 'Register' button",An error message is displayed indicating Email is required. Registration does not proceed.
+TC005 - Registration with Invalid Email Format,Account Registration,Functional,High,User is on https://sauce-demo.myshopify.com/account/register,"1. Navigate to https://sauce-demo.myshopify.com/account/register
+2. Enter First Name: Tuang
+3. Enter Last Name: Test
+4. Enter Email: tuang@test (invalid format)
+5. Enter Password: 12345
+6. Click 'Create' or 'Register' button",An error message is displayed indicating the email format is invalid. Registration does not proceed.
+TC006 - Registration with Blank Password,Account Registration,Functional,High,User is on https://sauce-demo.myshopify.com/account/register,"1. Navigate to https://sauce-demo.myshopify.com/account/register
+2. Enter First Name: Tuang
+3. Enter Last Name: Test
+4. Enter Email: tuang@test.com
+5. Leave Password blank
+6. Click 'Create' or 'Register' button",An error message is displayed indicating Password is required. Registration does not proceed.
+TC007 - Registration with Already Registered Email,Account Registration,Functional,Medium,User is on https://sauce-demo.myshopify.com/account/register and the email tuang@test.com is already registered,"1. Navigate to https://sauce-demo.myshopify.com/account/register
+2. Enter First Name: Tuang
+3. Enter Last Name: Test
+4. Enter Email: tuang@test.com (already registered)
+5. Enter Password: 12345
+6. Click 'Create' or 'Register' button",An error message is displayed indicating the email is already in use. Registration does not proceed.
+TC008 - Registration with Weak Password (Too Short),Account Registration,Functional,Medium,User is on https://sauce-demo.myshopify.com/account/register,"1. Navigate to https://sauce-demo.myshopify.com/account/register
+2. Enter First Name: Tuang
+3. Enter Last Name: Test
+4. Enter Email: tuang@test.com
+5. Enter Password: 12345 (5 characters - check if below minimum requirement)
+6. Click 'Create' or 'Register' button","If minimum password length is enforced (e.g. 6+ chars), an error message is displayed indicating the password is too short. Registration does not proceed."
+TC009 - All Fields Blank Submission,Account Registration,Functional,High,User is on https://sauce-demo.myshopify.com/account/register,"1. Navigate to https://sauce-demo.myshopify.com/account/register
+2. Leave all fields (First Name, Last Name, Email, Password) blank
+3. Click 'Create' or 'Register' button",Error messages are displayed for all required fields. Registration does not proceed.
+TC010 - Verify Password Field Masks Input,Account Registration,UI,Low,User is on https://sauce-demo.myshopify.com/account/register,"1. Navigate to https://sauce-demo.myshopify.com/account/register
+2. Click on the Password field
+3. Type: 12345",The entered password characters are masked (shown as dots or asterisks) and not visible as plain text.
+TC011 - Verify Page Title and Form Fields Present,Account Registration,UI,Low,User has a supported web browser,1. Navigate to https://sauce-demo.myshopify.com/account/register,"The registration page loads successfully. First Name, Last Name, Email, and Password fields are visible. A submit/register button is present."
+TC012 - Registration with Special Characters in First Name,Account Registration,Functional,Low,User is on https://sauce-demo.myshopify.com/account/register,"1. Navigate to https://sauce-demo.myshopify.com/account/register
+2. Enter First Name: Tu@ng! (with special characters)
+3. Enter Last Name: Test
+4. Enter Email: tuang@test.com
+5. Enter Password: 12345
+6. Click 'Create' or 'Register' button",System either accepts or rejects special characters in the name field with an appropriate validation message.
+TC013 - Verify Navigation to Login Page from Register Page,Account Registration,UI,Low,User is on https://sauce-demo.myshopify.com/account/register,"1. Navigate to https://sauce-demo.myshopify.com/account/register
+2. Look for a 'Sign In' or 'Login' link
+3. Click the link",User is redirected to the login/sign-in page.

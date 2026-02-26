@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd /c/Users/tvanleeu/TuangTest && npx playwright test tests/register.spec.ts --reporter=html 2>&1)",
+      "Bash(cd:*)",
+      "Bash(head:*)",
+      "Bash(python3:*)",
+      "Bash(cd /c/Users/tvanleeu/TuangTest && npx playwright test tests/register.spec.ts --project=chromium --reporter=html 2>&1)",
+      "Bash(cd /c/Users/tvanleeu/TuangTest && npx playwright show-report playwright-report 2>&1)",
+      "Bash(start:*)"
+    ]
+  }
+}
