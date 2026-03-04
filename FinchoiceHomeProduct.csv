@@ -1,0 +1,31 @@
+Title,Preconditions,Test Data,Steps,Expected Results
+Verify Home Product page opens in Chrome,"Chrome browser is installed and internet connection is available.
+Staging environment (Digital_Release_Candidate_20260225) is accessible.",None,"1. Launch Google Chrome and navigate to https://staging.finchoice.mobi/Digital_Release_Candidate_20260225/Home/Product
+2. Wait for the page to fully load.","The FinChoice Home Product page loads successfully without any errors. The FinChoice logo and navigation menu are displayed. The page title or heading (e.g., ""Get Your Quote Now"") is visible, indicating the user is on the product listing page."
+Verify all product sections are displayed with correct details,User is on the FinChoice Home Product page.,N/A,"1. Scroll through the Home Product page to view all product offerings.
+2. Identify each product section: MobiMoney, Personal Loan, Funeral Cover, Accident Cover.
+3. For each product, verify the following details:
+- Product name is displayed as the section title.
+- A short description or tagline is present (e.g., MobiMoney shows 'Instant access up to R10 000').
+- Key features or information are listed (bullet points or brief text).
+- A call-to-action button or link is present (e.g., 'Get Your Quote Now' for loans, 'Get Immediate Cover' for Accident Cover).","Each product offering section is visible and contains the correct information:
+- **MobiMoney**: Displays 'Instant access up to R10 000' as tagline, features like 'FREE to activate', 'Multiple monthly withdrawals', 'Repay over 1, 2 or 3 months', and a 'Get Your Quote Now' button【9†L2-L10】.
+- **Personal Loan**: Shows 'Get up to R40 000' as tagline, includes 'Repay over 6, 12 or 24 months' and 'Apply in 3 easy steps', with a 'Get Your Quote Now' button【9†L14-L22】【9†L26-L34】.
+- **Funeral Cover**: Shows 'Get up to R100 000 per person', includes features 'Personal, Family, Parents and Extended Family cover', 'From only R49 per month', 'Up to 19 people on 1 plan', 'Premiums stay the same for 12 months', and a 'Get Your Quote Now' button【9†L34-L42】.
+- **Accident Cover**: Shows 'Get up to R50 000 cover', includes 'For only R39 per month', 'Whether travelling near or far', 'Sign up quick, cover is instant', 'Premiums stay the same for 12 months', and a 'Get Immediate Cover' button【9†L47-L55】."
+Verify navigation to Home Product page from home screen,User is on the FinChoice home page (staging environment) or landing page.,N/A,"1. On the FinChoice home/landing page, locate the navigation option or link labeled 'Products', 'Our Products', or similar (for example, 'About our products').
+2. Click on the 'Products' link or menu option.","User is directed to the Home Product page (product listing). The page opens in Chrome, showing the list of FinChoice products. The URL should be the expected '/Home/Product' page and the product sections (MobiMoney, Personal Loan, etc.) are visible on the page."
+Verify each product CTA navigates to the correct page,User is on the FinChoice Home Product page.,N/A,"1. On the Home Product page, click the call-to-action for **MobiMoney** (e.g., 'Get Your Quote Now' for MobiMoney).
+2. Verify that a new page or flow for MobiMoney application or activation opens (e.g., MobiMoney quote/application page).
+3. Return to Home Product page.
+4. Click the **Personal Loan** 'Get Your Quote Now' button and verify it navigates to the Personal Loan application page.
+5. Return to Home Product page.
+6. Click the **Funeral Cover** 'Get Your Quote Now' button and verify it navigates to the Funeral Cover quote page.
+7. Click the **Accident Cover** 'Get Immediate Cover' button and verify it navigates to the Accident Cover sign-up page.","Each product’s call-to-action button opens the corresponding application or details page in Chrome:
+- MobiMoney button leads to the MobiMoney account activation/quote page【9†L0-L8】.
+- Personal Loan button leads to the Personal Loan quote/application page【9†L12-L20】.
+- Funeral Cover button leads to the Funeral Cover quote signup page【9†L32-L40】.
+- Accident Cover button leads to the Accident Cover immediate cover signup page【9†L45-L53】.
+In each case, the appropriate page or form loads without errors, indicating the user can proceed with that product’s process."
+Verify error handling when product data fails to load,Simulate a scenario where the product information service is unavailable or returns an error.,N/A,"1. (Test setup) Disconnect the network or use a testing tool to simulate a server error for the product data API before loading the Home Product page.
+2. Launch the Home Product page under these conditions.","The page displays a user-friendly error message (e.g., 'Something went wrong, please try again later' or similar) instead of product listings. The layout should handle the error gracefully (no broken layouts or console errors), and the user should be informed that the products cannot be loaded at this time【5004†L1-L9】."

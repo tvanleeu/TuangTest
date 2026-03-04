@@ -7,7 +7,9 @@
       "Bash(python3:*)",
       "Bash(cd /c/Users/tvanleeu/TuangTest && npx playwright test tests/register.spec.ts --project=chromium --reporter=html 2>&1)",
       "Bash(cd /c/Users/tvanleeu/TuangTest && npx playwright show-report playwright-report 2>&1)",
-      "Bash(start:*)"
+      "Bash(start:*)",
+      "Bash(npx playwright:*)",
+      "Bash(node:*)"
     ]
   }
 }

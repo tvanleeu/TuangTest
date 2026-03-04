@@ -1,0 +1,86 @@
+Title,Section,Type,Priority,Preconditions,Steps,Expected Result
+Verify Blog page loads successfully,Page Load,Functional,High,User has a browser open and internet access,1. Navigate to https://sauce-demo.myshopify.com/blogs/news,Page loads with HTTP 200. Page title shows News and the Sauce Demo header is visible.
+Verify page title in browser tab,Page Load,Functional,Medium,User navigates to the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Observe browser tab title",Browser tab displays News – Sauce Demo.
+Verify breadcrumb navigation displays correctly,Navigation,Functional,Medium,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Observe the breadcrumb trail",Breadcrumb shows Home — News with correct links.
+Verify breadcrumb Home link navigates to homepage,Navigation,Functional,High,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Click the Home breadcrumb link",User is redirected to https://sauce-demo.myshopify.com/.
+Verify top navigation Search link works,Navigation,Functional,High,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Click Search in the top navigation",User is redirected to https://sauce-demo.myshopify.com/search.
+Verify top navigation About Us link works,Navigation,Functional,High,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Click About Us in the top navigation",User is redirected to https://sauce-demo.myshopify.com/pages/about-us.
+Verify top navigation Log In link works,Navigation,Functional,High,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Click Log In in the top navigation",User is redirected to https://sauce-demo.myshopify.com/account/login.
+Verify top navigation Sign Up link works,Navigation,Functional,High,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Click Sign up in the top navigation",User is redirected to https://sauce-demo.myshopify.com/account/register.
+Verify cart icon displays with correct item count,Cart,Functional,High,User has not added items to cart,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Observe the cart button in the header",Cart button shows My Cart (0) indicating an empty cart.
+Verify cart link navigates to cart page,Cart,Functional,High,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Click the My Cart (0) link",User is redirected to https://sauce-demo.myshopify.com/cart.
+Verify Check Out button is visible and links correctly,Cart,Functional,High,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Click the Check Out button",User is redirected to https://sauce-demo.myshopify.com/cart.
+Verify Sauce Demo logo/title link navigates to homepage,Navigation,Functional,High,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Click the Sauce Demo heading/logo link",User is redirected to the homepage https://sauce-demo.myshopify.com/.
+Verify hamburger/Menu toggle is present on mobile,Navigation,Functional,Medium,User is viewing the page on a mobile viewport (< 768px),"1. Open browser dev tools and set viewport to 375px wide
+2. Navigate to https://sauce-demo.myshopify.com/blogs/news
+3. Observe the navigation area",A menu toggle/hamburger icon is visible and navigation links are collapsed.
+Verify side navigation Home link works,Navigation,Functional,High,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Click Home in the side navigation",User is redirected to https://sauce-demo.myshopify.com/.
+Verify side navigation Catalog link works,Navigation,Functional,High,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Click Catalog in the side navigation",User is redirected to https://sauce-demo.myshopify.com/collections/all.
+Verify side navigation Blog link works,Navigation,Functional,High,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Click Blog in the side navigation",User remains on https://sauce-demo.myshopify.com/blogs/news (same page).
+Verify side navigation About Us link works,Navigation,Functional,High,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Click About Us in the side navigation",User is redirected to https://sauce-demo.myshopify.com/pages/about-us.
+Verify side navigation Login link works,Navigation,Functional,High,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Click Login in the side navigation",User is redirected to https://sauce-demo.myshopify.com/account/login.
+Verify side navigation Create Account link works,Navigation,Functional,High,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Click Create account in the side navigation",User is redirected to https://sauce-demo.myshopify.com/account/register.
+Verify blog post title is displayed,Blog Content,Functional,High,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Observe the blog listing",A blog post titled First Post with date 12 Mar is visible on the page.
+Verify blog post author is displayed,Blog Content,Functional,Medium,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Observe the blog post listing",The author Shopify is displayed beneath the post title.
+Verify blog post body text is displayed,Blog Content,Functional,Medium,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Observe the blog post content area",Blog post body text is visible and readable including sections about using Shopify.
+Verify blog post title links to the full post,Blog Content,Functional,High,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Click the First Post blog post title link",User is redirected to https://sauce-demo.myshopify.com/blogs/news/12832805-first-post.
+Verify Shopify ecommerce blog link in post body,Blog Content,Functional,Medium,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Locate the ecommerce blog hyperlink in the post body
+3. Click the link",A new tab or redirect opens to http://www.shopify.com/blog.
+Verify Shopify hyperlink in post body,Blog Content,Functional,Medium,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Locate the Shopify hyperlink in the post body
+3. Click the link",Link navigates to http://www.shopify.com/.
+Verify footer Search link works,Footer,Functional,Medium,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Scroll to the footer
+3. Click Search",User is redirected to https://sauce-demo.myshopify.com/search.
+Verify footer About Us link works,Footer,Functional,Medium,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Scroll to the footer
+3. Click About Us",User is redirected to https://sauce-demo.myshopify.com/pages/about-us.
+Verify footer About Us description text is present,Footer,Functional,Low,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Scroll to the footer and observe the About Us section",Footer displays a description mentioning Sauce as a Shopify social demo site.
+Verify payment icons are displayed in footer,Footer,UI,Low,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Scroll to the footer",Amex, Visa, and Mastercard payment icons are all visible in the footer.
+Verify copyright text is displayed in footer,Footer,UI,Low,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Scroll to the footer",Footer displays copyright text: Copyright © 2026 Sauce Demo.
+Verify Wish List link is present in navigation,Navigation,Functional,Low,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Observe the side/main navigation menu",A Wish list link is visible in the navigation.
+Verify Refer a Friend link is present in navigation,Navigation,Functional,Low,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Observe the side/main navigation menu",A Refer a friend link is visible in the navigation.
+Verify page is responsive on tablet viewport,Responsive Design,Functional,Medium,User has access to browser dev tools,"1. Open browser dev tools and set viewport to 768px wide
+2. Navigate to https://sauce-demo.myshopify.com/blogs/news",Page layout adjusts correctly for tablet. All content is readable and no elements overlap.
+Verify page is responsive on mobile viewport,Responsive Design,Functional,Medium,User has access to browser dev tools,"1. Open browser dev tools and set viewport to 375px wide
+2. Navigate to https://sauce-demo.myshopify.com/blogs/news",Page layout adjusts correctly for mobile. All content is readable and no elements overflow.
+Verify page loads within acceptable time,Performance,Performance,High,User has a stable internet connection,"1. Open browser developer tools and go to the Network tab
+2. Navigate to https://sauce-demo.myshopify.com/blogs/news
+3. Record the total page load time",Page fully loads within 3 seconds on a standard broadband connection.
+Verify page has no broken images,UI,Functional,Medium,User is on the blog page,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Inspect all images on the page",All images render correctly with no broken image icons.
+Verify page renders correctly in Chrome,Cross-Browser,Functional,High,Google Chrome (latest version) is installed,"1. Open Chrome browser
+2. Navigate to https://sauce-demo.myshopify.com/blogs/news",Page renders correctly with all elements visible in Chrome.
+Verify page renders correctly in Firefox,Cross-Browser,Functional,High,Mozilla Firefox (latest version) is installed,"1. Open Firefox browser
+2. Navigate to https://sauce-demo.myshopify.com/blogs/news",Page renders correctly with all elements visible in Firefox.
+Verify page renders correctly in Safari,Cross-Browser,Functional,Medium,Safari (latest version) is installed on macOS or iOS,"1. Open Safari browser
+2. Navigate to https://sauce-demo.myshopify.com/blogs/news",Page renders correctly with all elements visible in Safari.
+Verify page uses HTTPS,Security,Functional,High,None,"1. Navigate to https://sauce-demo.myshopify.com/blogs/news
+2. Observe the browser address bar",Address bar shows a padlock icon and the URL starts with https://.
